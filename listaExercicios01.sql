@@ -53,3 +53,7 @@ LEFT JOIN livros ON autores.id = livros.autor_id;
 SELECT alunos.nome AS aluno, COALESCE(matriculas.curso, 'Nenhum aluno matriculado') AS curso
 FROM matriculas
 RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
+
+SELECT alunos.nome AS aluno, matriculas.curso
+FROM matriculas
+INNER JOIN alunos ON matriculas.aluno_id = alunos.id;
